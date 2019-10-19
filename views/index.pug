@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    ul 
+        each val in users
+            p Hello #{val.username}
+    br
+    form(method = 'POST', action ='/')
+        #form-group
+        label Meals
+            input.form-control(name = "username", type = 'text')
+            select( value = "Choose Meal Number ")
+                option 3
+                option 4
+                option 5
+    br
+        input.btn.btn-primary(type = 'submit', value = 'Generate Meals')
+    br
+        input.btn.btn-primary(type = 'submit', value = 'Reset')
+

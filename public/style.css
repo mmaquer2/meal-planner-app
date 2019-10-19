@@ -1,0 +1,60 @@
+html {
+
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    background-color: cadetblue;
+    padding: 40px 40px;
+    text-align: center;
+
+
+}
+
+
+#home_grid {
+    display: grid;
+    grid-template-rows:  1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    grid-gap:10px;
+    padding:10px 10px;
+    background-color:skyblue;
+    color:white;
+    text-align: center;
+    
+    
+    grid-template: 
+
+
+                    "head head head"
+                    "main1 main1 main1 "
+                    "main1 main1 main1"
+                    "foot foot foot";
+}       
+
+
+#head{
+    grid-area: head;
+    height:100px;
+    border-radius: 20px;
+    background-color:#203145;
+
+
+}
+
+#main1{
+
+    grid-area:main1;
+    height:500px;
+    border-radius:20px;
+    background-color:#203145;
+
+}
+
+#foot{
+    grid-area:foot;
+    height:100px;
+    border-radius: 20px;
+    background-color:#203145;
+
+
+}
