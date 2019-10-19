@@ -1,9 +1,6 @@
 extends layout
 
 block content
-    ul 
-        each val in users
-            p Hello #{val.username}
     br
     form(method = 'POST', action ='/')
         #form-group
@@ -17,4 +14,8 @@ block content
         input.btn.btn-primary(type = 'submit', value = 'Generate Meals')
     br
         input.btn.btn-primary(type = 'submit', value = 'Reset')
+
+    ul 
+        each val in food
+            p Daily Menu:  #{val.meal}
 

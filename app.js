@@ -64,19 +64,19 @@ app.set('view engine', 'pug')
 
 //bring in models
 
-let User = require('./models/user.model')
+let Meal = require('./models/food.model')
 
 //home route
 
 app.get('/', function(req, res) {
 
-     User.find(function(err, username){
+     Meal.find(function(err, Foods){
             if(err){
                 console.log(err)
             }else if(username) {
 
         res.render('index', {
-                "users": username
+                "Menu": Food
 
             });
         }
@@ -94,24 +94,6 @@ app.get('/users/add',function(req,res){
 });
 
 
-//app Submit post route
-
-app.post('/users/add', function(req, res){
-    let name = new User();
-    name.username =req.body.username;
-
-    name.save(function(err){
-        if(err){
-            console.log(err);
-            return;
-        }
-        else {
-            res.redirect('/')
-        }
-
-    });
-   
-});
 
 //test for post requets
 //console.log('submitted');
