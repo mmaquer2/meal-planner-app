@@ -2,20 +2,26 @@ extends layout
 
 block content
     br
-    form(method = 'POST', action ='/')
+    form(method = 'POST', action ='/mealplan')
         #form-group
-        label Meals
-            input.form-control(name = "username", type = 'text')
-            select( value = "Choose Meal Number ")
-                option 3
-                option 4
-                option 5
-    br
+        label Enter Your Daily Calorie Requirements 
+            input.form-control(name = "cal_number", type = 'text' id = "cal_number")
+            span
+        label How Many Meals You Eat in a Day? 
+            span
+            select( value = "Choose Meal Number " id = "meal_number")
+                option 3 
+                option 4    
+                option 5 
         input.btn.btn-primary(type = 'submit', value = 'Generate Meals')
     br
-        input.btn.btn-primary(type = 'submit', value = 'Reset')
+    br
+    
 
-    ul 
-        each val in food
-            p Daily Menu:  #{val.meal}
+    p #{meal}
+
+    
+
+       
+        
 

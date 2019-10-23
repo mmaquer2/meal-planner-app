@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    br
+    h3 Here is your requested meal plan
+    p Daily calories: #{cals} and number of meals: #{cals}
+    
+
+    p #{meal}
+
+    br
+    br
+    br
+    input.btn.btn-primary(type = 'submit', value = 'Reset' onclick = "reset()")

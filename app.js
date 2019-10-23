@@ -8,7 +8,7 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 5555;
+const port = process.env.PORT || 3737;
 
 app.use(cors());
 app.use(express.json());
@@ -68,24 +68,75 @@ let Meal = require('./models/food.model')
 
 //home route
 
+
+// get meals route
+
+
+/*
 app.get('/', function(req, res) {
 
-     Meal.find(function(err, Foods){
-            if(err){
-                console.log(err)
-            }else if(username) {
+    Meal.find({},function(err, food){
+           if(err){
+               console.log(err)
+           }else if(Meal) {
 
-        res.render('index', {
-                "Menu": Food
+       res.render('index', {
+               "meal": food
 
-            });
-        }
-    });
+           });
+       }
+   });
+
+});
+
+*/
+
+//db.collection.find().forEach(<function>)
+
+app.get('/', function (req, res){
+    
+        res.render('index')
+        
+    
+
 
 });
 
 
-// add user route
+//get caloarie count and meal number from front end
+
+function user_data() {
+
+    const meal_number = ''
+    const cal_number = ''
+
+    //run another function and declare variables in the global scope to run get requests 
+}
+
+
+//random grab of meal objects
+//function random()
+
+app.post('/mealplan', function( req,res){
+        Meal.find(function(err, food){
+            if (err){
+                console.log(err)
+            } else {
+                food.forEach(function(i){
+                        var a = i.cals
+                        
+
+                     res.render('mealplan', {
+                        "meal": a
+                    });
+                })
+            }
+        })
+})
+
+
+
+/*
 
 app.get('/users/add',function(req,res){
     res.render('login'), {
@@ -93,7 +144,7 @@ app.get('/users/add',function(req,res){
     }
 });
 
-
+*/
 
 //test for post requets
 //console.log('submitted');

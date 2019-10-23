@@ -18,21 +18,17 @@ const mealSchema = new Schema({
 
   },
   ingreds : {
-    type:Array,
+    type: String,
     required: true,
     trim: true,
     minlength: 1
 
-  },
-  type: {
-    required: true,
-    trim:true,
-    minlength: 1,
   }
+  
 }, {
   timestamps: true,
 });
 
-let User = mongoose.model('Meal', mealSchema);
+let Meal = mongoose.model('Meal', mealSchema);
 
 module.exports = Meal;

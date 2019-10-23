@@ -1,12 +1,17 @@
 html {
 
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     color:white;
     background-color: cadetblue;
     padding: 40px 40px;
     text-align: center;
 
 
+}
+
+span {
+
+    padding: 10px 10px;
 }
 
 
@@ -35,7 +40,7 @@ html {
 #head{
     grid-area: head;
     height:100px;
-    border-radius: 20px;
+    
     background-color:#203145;
 
 
@@ -44,8 +49,8 @@ html {
 #main1{
 
     grid-area:main1;
-    height:500px;
-    border-radius:20px;
+    height:400px;
+    
     background-color:#203145;
 
 }
@@ -53,7 +58,7 @@ html {
 #foot{
     grid-area:foot;
     height:100px;
-    border-radius: 20px;
+    
     background-color:#203145;
 
 
